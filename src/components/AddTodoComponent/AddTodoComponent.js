@@ -49,7 +49,7 @@ const AddTodoComponent = ({ writeData, setFilesForSend, filesForSend }) => {
         setTitle={setDescription}
         emptyFields={emptyFields}
         setEmptyFields={setEmptyFields}
-        width={'40%'}
+        width={'43%'}
       />
       <AddTodoItem
         name={'Дата'}
@@ -64,7 +64,7 @@ const AddTodoComponent = ({ writeData, setFilesForSend, filesForSend }) => {
         title={filesForSend}
         setTitle={setFilesForSend}
         isFile={true}
-        width={'15%'}
+        width={'20%'}
         setFilesForSend={setFilesForSend}
         files={filesForSend}
       />

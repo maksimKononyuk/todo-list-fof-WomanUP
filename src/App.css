@@ -20,6 +20,10 @@
   overflow: auto;
   padding: 10px;
 }
+.header {
+  font-size: 2rem;
+  font-family: 'Roboto';
+}
 .todo_list {
   width: 100%;
 }
