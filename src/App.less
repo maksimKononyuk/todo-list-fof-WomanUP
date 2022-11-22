@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.flexContainer(@direction, @alignItems, @justifyContent) {
+  display: flex;
+  flex-direction: @direction;
+  align-items: @alignItems;
+  justify-content: @justifyContent;
+}
+.font(@rem, @family) {
+  font-size: @rem;
+  font-family: @family;
+}
+.input() {
+  width: 100%;
+  height: 100%;
+  .font(1.2rem, 'Roboto');
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.App {
+  .flexContainer(column, center, flex-start);
+  background-color: rgb(153, 179, 248);
+  height: 100vh;
+  overflow: auto;
+  padding: 10px;
+}
+.todo_list {
+  width: 100%;
+  .checkbox {
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 3px;
+    cursor: pointer;
+    div {
+      width: 100%;
+      height: 100%;
+      background: green;
+      border-radius: 5px;
+    }
+  }
+  .todo {
+    .flexContainer(row, streach, center);
+    margin-top: 20px;
+    .item {
+      .flexContainer(column, streach, flex-start);
+      margin-right: 10px;
+      border: 1px solid black;
+      border-radius: 10px;
+      h4 {
+        .font(1.1rem, 'Roboto');
+        border-radius: 10px;
+        text-align: center;
+        background-color: chartreuse;
+      }
+      .files,
+      p,
+      div {
+        .font(1.1rem, 'Roboto');
+        padding: 3px;
+      }
+      .input {
+        .input();
+      }
+      .refToFile {
+        text-decoration: underline;
+        color: #fff;
+        cursor: pointer;
+        &:hover {
+          color: #000;
+        }
+        &:active {
+          color: greenyellow;
+        }
+      }
+    }
+    .buttons {
+      .flexContainer(row, center, space-between);
+      width: 20%;
+      border: none;
+    }
+  }
+}
+.add_todo {
+  .flexContainer(row, flex-start, center);
+  width: 100%;
+  min-height: 110px;
+  .name {
+    text-align: center;
+    width: 100%;
+    background-color: aqua;
+  }
+  .add_todo_item {
+    .flexContainer(column, center, flex-start);
+    .font(1.3rem, 'Roboto');
+    height: 100%;
+    margin-right: 5px;
+    .input {
+      .input();
+    }
+    .files {
+      .font(1rem, 'Roboto');
+      border: 1px solid black;
+      height: 100%;
+      width: 100%;
+      background-color: #fff;
+    }
+  }
+}
